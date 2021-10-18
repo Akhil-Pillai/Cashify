@@ -5,22 +5,28 @@
         <meta http-equiv="X-UA-Compatible" content="IE-edge">
         <title>Expense App</title>
         <meta content="width=device-width, initial-scale=1" name="viewport"> 
-        <link href="css/main.css" rel="stylesheet" type="text/css" media="screen">
+        <link href="main.css" rel="stylesheet" type="text/css" media="screen">
         <script src="main.js"></script>
         
     </head>
     <body>
+        <h1 id="headingTotal">0</h1>
         <input id="inputAmount" type="text"></input>
-        <button id="btnAddExpense"></button>
+        <button id="btnAddExpense">+</button>
 
     </body>
     <script>      
+        //get heading element
+        const headingEl = document.querySelector("#headingTotal")
+        
         //init value of expense at 0
         let totalExpense = 0;
-       
+
+        //set heading element to total expense
+        headingEl.textContent = totalExpense
+
 
         //onButtonClick add inputAmount to totalExpense
-
         function addExpenseToToal(){
             //read value from input amount
             const inputElement = document.querySelector("#inputAmount");
@@ -33,7 +39,8 @@
 
             //add value to total expense
             totalExpense = totalExpense + expense;
-            console.log(( totalExpense ));
+            //set heading element to total expense
+            headingEl.textContent = totalExpense;
         }
 
         
