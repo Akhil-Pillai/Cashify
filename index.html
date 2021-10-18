@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <title>Expense App</title>
+        <meta content="width=device-width, initial-scale=1" name="viewport"> 
+        <link href="css/main.css" rel="stylesheet" type="text/css" media="screen">
+        <script src="main.js"></script>
+        
+    </head>
+    <body>
+        <input id="inputAmount" type="text"></input>
+        <button id="btnAddExpense"></button>
+
+    </body>
+    <script>      
+        //init value of expense at 0
+        let totalExpense = 0;
+       
+
+        //onButtonClick add inputAmount to totalExpense
+
+        function addExpenseToToal(){
+            //read value from input amount
+            const inputElement = document.querySelector("#inputAmount");
+            const textAmount = inputElement.value;
+            
+
+            //convert to number 
+            const expense = parseInt(textAmount, 10);
+            
+
+            //add value to total expense
+            totalExpense = totalExpense + expense;
+            console.log(( totalExpense ));
+        }
+
+        
+
+        //get button element
+        const element = document.querySelector("#btnAddExpense");
+        
+
+        //listen to click event
+        element.addEventListener("click", addExpenseToToal, false);
+        
+        
+    </script>
+</html>
