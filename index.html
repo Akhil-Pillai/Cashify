@@ -15,12 +15,15 @@
         <h1 id="headingTotal">0</h1>
         <input id="inputAmount" type="text"></input>
         <button id="btnAddExpense">+</button>
+        <button id="reset">reset</button>
 
     </body>
     <script>      
         //get heading element
-        const headingEl = document.querySelector("#headingTotal")
+        const headingEl = document.querySelector("#headingTotal");
         
+        //get button reset
+        const btnReset = document.querySelector("#reset");
         //init value of expense at 0
         let totalExpense = 0;
 
